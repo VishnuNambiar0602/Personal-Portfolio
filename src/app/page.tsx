@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh">
       <Header />
-      <main className="flex-1 bg-background">
+      <main className="flex-1">
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
