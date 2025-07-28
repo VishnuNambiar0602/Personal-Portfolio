@@ -15,7 +15,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Code2 className="h-6 w-6 text-primary" />
+          <Code2 className="h-6 w-6 text-accent" />
           <span className="font-bold font-headline text-lg tracking-wide">My Digital Stage</span>
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
@@ -23,7 +23,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-primary"
+              className="transition-colors text-foreground/60 hover:text-foreground/80"
             >
               {link.label}
             </Link>

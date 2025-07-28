@@ -47,14 +47,14 @@ export default function HeroSection() {
     <section id="hero" className="relative w-full h-[calc(100vh-4rem)] flex items-center justify-center">
        <div className="absolute inset-0 bg-grid-slate-300/[0.2] [mask-image:linear-gradient(to_bottom,white_50%,transparent_100%)]"></div>
       <div className={cn("container px-4 md:px-6 text-center space-y-6 z-10", animationClass)}>
-        <h1 className="text-4xl font-extrabold font-headline tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary-foreground bg-primary/80 py-2 px-4 rounded-lg inline-block shadow-lg">
+        <h1 className="text-4xl font-extrabold font-headline tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary-foreground bg-primary/90 py-2 px-6 rounded-lg inline-block shadow-lg">
           Welcome to My Digital Stage
         </h1>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
           A showcase of my journey in technology, creativity, and professional growth.
         </p>
         <div className="space-x-4">
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button asChild size="lg">
             <Link href="#projects">
               View My Work
             </Link>
