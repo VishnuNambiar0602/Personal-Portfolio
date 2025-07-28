@@ -10,40 +10,12 @@ import { Button } from "@/components/ui/button";
 export default function ContactSection() {
   const [animationClass, setAnimationClass] = useState("opacity-0");
 
-  useEffect(() => {
-    let isMounted = true;
-    const getAnimation = async () => {
-      try {
-        const { suggestedAnimations } = await personalizePortfolioDesign({
-          userInteraction: "User scrolled to the Contact section",
-          currentDesignState: "A modern portfolio with a slate blue primary color, light gray background, and mustard yellow accent.",
-        });
-        if (isMounted && suggestedAnimations.length > 0) {
-          const anim = suggestedAnimations[0].toLowerCase();
-          if (anim.includes("slide")) {
-            setAnimationClass("animate-in slide-in-from-bottom-10 duration-700 ease-out");
-          } else {
-            setAnimationClass("animate-in fade-in duration-700 ease-out");
-          }
-        } else if (isMounted) {
-          setAnimationClass("animate-in fade-in duration-700 ease-out");
-        }
-      } catch (error) {
-        console.error("Failed to get animation for Contact section:", error);
-        if (isMounted) {
-          setAnimationClass("animate-in fade-in duration-700 ease-out");
-        }
-      }
-    };
-
-    getAnimation();
-    return () => {
-      isMounted = false;
-    };
+    useEffect(() => {
+    setAnimationClass("animate-in fade-in duration-700 ease-out");
   }, []);
 
   return (
-    <section id="contact" className={cn("w-full py-24 md:py-32 bg-secondary", animationClass)}>
+    <section id="contact" className={cn("w-full py-24 md:py-32", animationClass)}>
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center space-y-4">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">Get in Touch</h2>
@@ -51,7 +23,7 @@ export default function ContactSection() {
             I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-             <Button asChild size="lg">
+             <Button asChild size="lg" variant="secondary">
               <a href="mailto:hello@example.com">
                 <Mail className="mr-2 h-4 w-4" /> Email Me
               </a>

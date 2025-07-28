@@ -9,39 +9,12 @@ export default function AboutSection() {
   const [animationClass, setAnimationClass] = useState("opacity-0");
 
   useEffect(() => {
-    let isMounted = true;
-    const getAnimation = async () => {
-      try {
-        const { suggestedAnimations } = await personalizePortfolioDesign({
-          userInteraction: "User scrolled to the About Me section",
-          currentDesignState: "A modern portfolio with a slate blue primary color, light gray background, and mustard yellow accent.",
-        });
-        if (isMounted && suggestedAnimations.length > 0) {
-          const anim = suggestedAnimations[0].toLowerCase();
-          if (anim.includes("slide")) {
-            setAnimationClass("animate-in slide-in-from-bottom-10 duration-700 ease-out");
-          } else {
-            setAnimationClass("animate-in fade-in duration-700 ease-out");
-          }
-        } else if (isMounted) {
-          setAnimationClass("animate-in fade-in duration-700 ease-out");
-        }
-      } catch (error) {
-        console.error("Failed to get animation for About section:", error);
-        if (isMounted) {
-          setAnimationClass("animate-in fade-in duration-700 ease-out");
-        }
-      }
-    };
-
-    getAnimation();
-    return () => {
-      isMounted = false;
-    };
+    setAnimationClass("animate-in fade-in duration-700 ease-out");
   }, []);
 
   return (
     <section id="about" className={cn("container py-24 sm:py-32", animationClass)}>
+       <h1 className="text-3xl font-bold tracking-tight mb-8">Dashboard</h1>
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
           <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>

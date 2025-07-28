@@ -16,7 +16,7 @@ type ContentCardProps = {
 export default function ContentCard({ title, description, image, link, tags, imageHint }: ContentCardProps) {
   return (
     <Link href={link} target="_blank" rel="noopener noreferrer" className="block group" aria-label={`View ${title}`}>
-      <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-[1.02] bg-card">
+      <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-[1.02] bg-card text-card-foreground">
         <CardHeader className="p-0">
           <div className="relative w-full aspect-video overflow-hidden">
             <Image 
@@ -38,7 +38,7 @@ export default function ContentCard({ title, description, image, link, tags, ima
         <CardContent>
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <Badge key={tag} variant="secondary" className="font-medium">
+              <Badge key={tag} variant="default" className="font-medium bg-primary text-primary-foreground">
                 {tag}
               </Badge>
             ))}
