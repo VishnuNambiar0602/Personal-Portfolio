@@ -19,11 +19,11 @@ export default function ContactSection() {
         <div className="mx-auto max-w-3xl text-center space-y-4">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl">Get in Touch</h2>
           <p className="text-muted-foreground md:text-xl">
-            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out.
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
              <Button asChild size="lg" variant="secondary">
-              <a href="mailto:hello@example.com">
+              <a href="mailto:visnunambiar2006@gmail.com">
                 <Mail className="mr-2 h-4 w-4" /> Email Me
               </a>
             </Button>
