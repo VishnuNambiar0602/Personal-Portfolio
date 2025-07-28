@@ -21,18 +21,6 @@ export default function Header() {
           <span className="font-bold font-headline text-lg tracking-wide hidden sm:inline-block">My Digital Stage</span>
         </Link>
         
-        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="transition-colors text-foreground/60 hover:text-foreground/80"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
         <div className="hidden items-center space-x-2 md:flex">
           <Button variant="ghost" size="icon" asChild>
             <Link href="https://github.com" target="_blank" aria-label="GitHub"><Github /></Link>
@@ -74,6 +62,20 @@ export default function Header() {
             </SheetContent>
           </Sheet>
         </div>
+      </div>
+      
+      <div className="hidden md:flex justify-center -mt-8">
+        <nav className="bg-card/90 backdrop-blur-sm shadow-lg rounded-full px-6 py-3 flex items-center space-x-6 text-sm font-medium">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="transition-colors text-foreground/60 hover:text-foreground/80 px-2 py-1"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );
