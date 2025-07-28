@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Code2, Github, Instagram, Linkedin, Menu } from "lucide-react";
+import { Github, Instagram, Linkedin, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
