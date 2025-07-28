@@ -12,13 +12,13 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
+      <div className="container flex h-16 items-center bg-background/80 backdrop-blur-sm rounded-full shadow-lg border border-border">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <div className="bg-primary text-primary-foreground p-2 rounded-full">
             <Code2 className="h-6 w-6" />
           </div>
-          <span className="font-bold font-headline text-lg tracking-wide">My Digital Stage</span>
+          <span className="font-bold font-headline text-lg tracking-wide hidden sm:inline-block">My Digital Stage</span>
         </Link>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
@@ -51,7 +51,13 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <nav className="grid gap-6 text-lg font-medium mt-16">
+              <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
+                <div className="bg-primary text-primary-foreground p-2 rounded-full">
+                  <Code2 className="h-6 w-6" />
+                </div>
+                <span className="font-bold font-headline text-lg tracking-wide">My Digital Stage</span>
+              </Link>
+              <nav className="grid gap-6 text-lg font-medium">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
