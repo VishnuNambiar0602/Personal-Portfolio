@@ -12,14 +12,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
-      <div className="container flex h-16 items-center bg-background/80 backdrop-blur-sm rounded-full shadow-lg border border-border">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="container mx-auto flex h-20 items-center justify-between bg-transparent px-4">
+        <Link href="/" className="flex items-center space-x-2">
           <div className="bg-primary text-primary-foreground p-2 rounded-full">
             <Code2 className="h-6 w-6" />
           </div>
           <span className="font-bold font-headline text-lg tracking-wide hidden sm:inline-block">My Digital Stage</span>
         </Link>
+        
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
           {navLinks.map((link) => (
             <Link
@@ -31,21 +32,23 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <div className="hidden items-center space-x-2 md:flex">
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com" target="_blank" aria-label="GitHub"><Github /></Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><Linkedin /></Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="https://instagram.com" target="_blank" aria-label="Instagram"><Instagram /></Link>
-            </Button>
-          </div>
+
+        <div className="hidden items-center space-x-2 md:flex">
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="https://github.com" target="_blank" aria-label="GitHub"><Github /></Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><Linkedin /></Link>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <Link href="https://instagram.com" target="_blank" aria-label="Instagram"><Instagram /></Link>
+          </Button>
+        </div>
+
+        <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
