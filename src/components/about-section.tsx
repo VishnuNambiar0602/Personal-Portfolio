@@ -17,7 +17,7 @@ export default function AboutSection() {
         <div className="space-y-4">
           <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
           <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            I&apos;m a passionate and creative developer with a knack for building beautiful, functional, and user-friendly web applications. With a strong foundation in modern web technologies, I love turning complex problems into simple, elegant solutions. When I&apos;m not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.
+            I'm a passionate and creative developer with a knack for building beautiful, functional, and user-friendly web applications. With a strong foundation in modern web technologies, I love turning complex problems into simple, elegant solutions. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.
           </p>
           <div className="space-y-2">
             <h3 className="font-semibold tracking-tight">My Skills</h3>
@@ -36,7 +36,7 @@ export default function AboutSection() {
             alt="About Me"
             fill
             className="rounded-lg object-cover shadow-lg"
-            data-ai-hint="portrait professional"
+            data-ai-hint="futuristic anime"
           />
         </div>
       </div>
