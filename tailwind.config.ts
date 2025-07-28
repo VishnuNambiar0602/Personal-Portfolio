@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        headline: ['Playfair Display', 'serif'],
+        body: ['"Times New Roman"', 'serif'],
+        headline: ['"Times New Roman"', 'serif'],
         code: ['monospace'],
       },
       colors: {
