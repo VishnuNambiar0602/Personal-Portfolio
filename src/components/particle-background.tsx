@@ -28,8 +28,9 @@ const ParticleBackground = () => {
   const options: ISourceOptions = useMemo(
     () => ({
       fullScreen: {
-        enable: false,
-        zIndex: -1
+        enable: false
+      },
+      background: {
       },
       fpsLimit: 60,
       interactivity: {
@@ -104,7 +105,7 @@ const ParticleBackground = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className="absolute inset-0 z-0"
+        className="h-full w-full"
       />
     );
   }
