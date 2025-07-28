@@ -27,7 +27,7 @@ export default function HeroSection() {
           &quot;With great codes comes great bugs&quot;
         </h1>
         <p className="mt-4 text-lg md:text-2xl text-white/80">
-          ...and I am not here for both.
+          ...and I am here for neither.
         </p>
       </div>
     </section>
