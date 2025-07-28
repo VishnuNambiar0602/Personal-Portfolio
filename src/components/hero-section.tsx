@@ -2,8 +2,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
+import ParticleBackground from "./particle-background";
 
 export default function HeroSection() {
   const [animationClass, setAnimationClass] = useState("opacity-0");
@@ -14,14 +14,7 @@ export default function HeroSection() {
 
   return (
     <section id="hero" className={cn("relative w-full h-screen", animationClass)}>
-      <Image
-        src="https://placehold.co/1920x1080.png"
-        alt="Hero Background"
-        fill
-        className="object-cover"
-        data-ai-hint="anime landscape"
-        priority
-      />
+      <ParticleBackground />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4">
         <h1 className="text-4xl md:text-6xl font-headline font-bold tracking-tight">
           &quot;With great codes comes great bugs&quot;
