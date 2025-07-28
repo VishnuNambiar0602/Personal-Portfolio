@@ -6,6 +6,7 @@ import {
   type Container,
   type ISourceOptions,
 } from "@tsparticles/engine";
+// @ts-ignore
 import { loadSlim } from "@tsparticles/slim";
 
 
@@ -26,6 +27,10 @@ const ParticleBackground = () => {
 
   const options: ISourceOptions = useMemo(
     () => ({
+      fullScreen: {
+        enable: false,
+        zIndex: -1
+      },
       fpsLimit: 60,
       interactivity: {
         events: {
