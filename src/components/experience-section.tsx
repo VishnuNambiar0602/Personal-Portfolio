@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { personalizePortfolioDesign } from "@/ai/flows/personalize-portfolio-design";
 import ContentCard from "@/components/content-card";
 import { experiences } from "@/lib/data";
 

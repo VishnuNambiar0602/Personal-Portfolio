@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { personalizePortfolioDesign } from "@/ai/flows/personalize-portfolio-design";
 import { Button } from "@/components/ui/button";
 
 export default function ContactSection() {

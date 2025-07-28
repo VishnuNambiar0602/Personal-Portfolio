@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { personalizePortfolioDesign } from "@/ai/flows/personalize-portfolio-design";
 
 export default function AboutSection() {
   const [animationClass, setAnimationClass] = useState("opacity-0");
@@ -14,7 +13,6 @@ export default function AboutSection() {
 
   return (
     <section id="about" className={cn("container py-24 sm:py-32", animationClass)}>
-       <h1 className="text-3xl font-bold tracking-tight mb-8">Dashboard</h1>
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
           <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
