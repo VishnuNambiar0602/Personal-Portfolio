@@ -5,6 +5,7 @@ import { Github, Instagram, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { socialLinks } from "@/lib/data";
 
 export default function ContactSection() {
   const [animationClass, setAnimationClass] = useState("opacity-0");
@@ -29,17 +30,17 @@ export default function ContactSection() {
             </Button>
             <div className="flex items-center gap-2">
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://github.com" target="_blank" aria-label="GitHub">
+                <Link href={socialLinks.github} target="_blank" aria-label="GitHub">
                   <Github className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <Link href={socialLinks.linkedin} target="_blank" aria-label="LinkedIn">
                   <Linkedin className="h-5 w-5" />
                 </Link>
               </Button>
               <Button variant="outline" size="icon" asChild>
-                <Link href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <Link href={socialLinks.instagram} target="_blank" aria-label="Instagram">
                   <Instagram className="h-5 w-5" />
                 </Link>
               </Button>

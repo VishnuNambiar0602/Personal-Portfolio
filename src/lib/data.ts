@@ -7,6 +7,12 @@ export type Content = {
   imageHint: string;
 };
 
+export const socialLinks = {
+  github: "https://github.com",
+  linkedin: "https://linkedin.com",
+  instagram: "https://instagram.com",
+};
+
 export const projects: Content[] = [
   {
     title: "AI-Powered E-commerce Platform",

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Github, Instagram, Linkedin, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { socialLinks } from "@/lib/data";
 
 export default function Header() {
   const navLinks = [
@@ -40,13 +41,13 @@ export default function Header() {
 
         <div className="hidden items-center space-x-2 md:flex">
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://github.com" target="_blank" aria-label="GitHub"><Github /></Link>
+            <Link href={socialLinks.github} target="_blank" aria-label="GitHub"><Github /></Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><Linkedin /></Link>
+            <Link href={socialLinks.linkedin} target="_blank" aria-label="LinkedIn"><Linkedin /></Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href="https://instagram.com" target="_blank" aria-label="Instagram"><Instagram /></Link>
+            <Link href={socialLinks.instagram} target="_blank" aria-label="Instagram"><Instagram /></Link>
           </Button>
         </div>
 
