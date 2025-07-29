@@ -8,9 +8,9 @@ export type Content = {
 };
 
 export const socialLinks = {
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  instagram: "https://instagram.com",
+  github: "https://github.com/VishnuNambiar0602",
+  linkedin: "https://www.linkedin.com/in/vishnu-nambiar-27b120288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  instagram: "https://www.instagram.com/vishnu_0602?igsh=dDk4cWJzaWZvdWo2",
 };
 
 export const projects: Content[] = [
