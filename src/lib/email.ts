@@ -3,12 +3,6 @@
 
 import { Resend } from 'resend';
 
-// IMPORTANT: Remember to add your RESEND_API_KEY to your environment variables.
-// Vercel/Firebase will need this environment variable set in the project settings.
-// Create a file named `.env.local` in the root of your project and add:
-// RESEND_API_KEY=your_api_key_here
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 interface EmailPayload {
   name: string;
   email: string;
@@ -16,6 +10,17 @@ interface EmailPayload {
 }
 
 export async function sendEmail({ name, email, message }: EmailPayload) {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    console.error('RESEND_API_KEY is not set. Email not sent.');
+    // It's important to provide feedback to the developer in the console
+    // and a user-friendly message in the UI.
+    return { success: false, message: 'The email service is not configured. Please contact the administrator.' };
+  }
+  
+  const resend = new Resend(apiKey);
+
   try {
     const { data, error } = await resend.emails.send({
       // This is a required sender address. You can use a default provided by Resend.
