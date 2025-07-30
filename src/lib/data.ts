@@ -61,8 +61,8 @@ export const siteData = {
   },
   // Social Media Links
   socialLinks: {
-    github: "https://github.com/vishnunambiar06",
-    linkedin: "https://linkedin.com/in/vishnunambiar",
+    github: "https://github.com/VishnuNambiar0602",
+    linkedin: "https://www.linkedin.com/in/vishnu-nambiar-27b120288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/vishnu_0602?igsh=dDk4cWJzaWZvdWo2",
   },
   // Content for the Projects section
@@ -82,6 +82,14 @@ export const siteData = {
       link: "https://github.com",
       tags: ["Python", "Machine Learning", "Pandas", "NumPy", "Matplotlib"],
       imageHint: "data analysis",
+    },
+    {
+      title: "AI Lead Agent",
+      description: "This is an AI agent created with the help of Google Gemini which acts as the brain and sends our cold emails to potential clients.",
+      image: "https://placehold.co/600x400.png",
+      link: "https://github.com/VishnuNambiar0602/ai-lead-agent",
+      tags: ["AI", "Gemini", "Python", "Email Automation"],
+      imageHint: "AI agent",
     },
   ] as Content[],
   // Content for the Experience section
