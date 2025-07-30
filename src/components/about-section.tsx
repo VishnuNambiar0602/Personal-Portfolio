@@ -22,6 +22,15 @@ export default function AboutSection() {
   return (
     <section id="about" className={cn("container py-24 sm:py-32", animationClass)}>
       <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative aspect-square">
+          {/* Using a standard img tag to avoid Next.js image optimization issues */}
+          <img
+            src={siteData.about.image}
+            alt="About Me"
+            className="rounded-lg object-cover shadow-lg w-full h-full"
+            data-ai-hint="portrait photo"
+          />
+        </div>
         <div className="space-y-4">
           <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">{siteData.about.title}</h2>
           <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-body">
@@ -47,15 +56,6 @@ export default function AboutSection() {
               ))}
             </div>
           </div>
-        </div>
-        <div className="relative aspect-square">
-          {/* Using a standard img tag to avoid Next.js image optimization issues */}
-          <img
-            src={siteData.about.image}
-            alt="About Me"
-            className="rounded-lg object-cover shadow-lg w-full h-full"
-            data-ai-hint="portrait photo"
-          />
         </div>
       </div>
     </section>
