@@ -17,8 +17,8 @@ export type Content = {
 export const siteData = {
   // Hero Section Content: Used for the main landing page hero section.
   hero: {
-    title: 'AI & ML Engineering Student',
-    subtitle: 'Pursuing a B.Tech in Artificial Intelligence and Machine Learning at CHRIST University, Bangalore, with a strong passion for emerging technologies and real-world problem-solving.',
+    title: 'With great code comes great bugs',
+    subtitle: '...i am here for neither',
   },
   // About Section Content: Used for the "About Me" section.
   about: {
