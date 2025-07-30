@@ -24,7 +24,7 @@ export const siteData = {
   about: {
     title: 'About Me',
     description: "Driven by curiosity and a commitment to continuous learning, I actively seek opportunities to expand my expertise. With a solid foundation in AI and ML, I am eager to apply my skills in innovation and data-driven solutions to make a meaningful impact in the evolving tech landscape.",
-    // TODO: Replace this placeholder with a direct link to your image from a hosting service like Imgur.
+    // Replace this with a direct link to your photo from a service like Imgur. See the README for more info.
     image: "https://placehold.co/600x600.png",
     skillsTitle: 'My Skills',
     
@@ -58,6 +58,29 @@ export const siteData = {
     title: 'Education',
     description: 'My academic background and qualifications.',
   },
+  // Hire Me Section Content: Used for the "Hire Me" section.
+  hireMe: {
+    title: 'Hire Me',
+    description: 'I offer a range of services to help you achieve your goals.',
+    services: [
+      {
+        title: 'Website Development',
+        description: 'Creating responsive and dynamic websites tailored to your needs.',
+      },
+      {
+        title: 'Content Writing',
+        description: 'Producing high-quality, engaging content for your brand.',
+      },
+      {
+        title: 'AI & ML Domain',
+        description: 'Leveraging artificial intelligence and machine learning to build smart solutions.',
+      },
+      {
+        title: 'Data Science',
+        description: 'Analyzing and interpreting complex data to drive insights and decisions.',
+      },
+    ],
+  },
   // Contact Section Content: Used for the "Get in Touch" section.
   contact: {
     title: 'Get in Touch',
@@ -70,6 +93,7 @@ export const siteData = {
       { href: "#projects", label: "Projects" },
       { href: "#experience", label: "Experience" },
       { href: "#education", label: "Education" },
+      { href: "#hire-me", label: "Hire Me" },
       { href: "#contact", label: "Contact" },
     ],
     title: "Vishnu Nambiar",
