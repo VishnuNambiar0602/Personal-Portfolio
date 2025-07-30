@@ -12,13 +12,8 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="bg-primary text-primary-foreground p-2 rounded-full">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="white"/>
-                <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0V20Z" fill="#F7CCAF"/>
-            </svg>
-          </div>
-          <span className="font-bold font-headline text-lg tracking-wide hidden sm:inline-block">{title}</span>
+          
+          <span className="font-bold font-headline text-lg tracking-wide sm:inline-block">{title}</span>
         </Link>
         
         <div className="hidden items-center space-x-2 md:flex">
@@ -57,12 +52,6 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent side="right">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                 <div className="bg-primary text-primary-foreground p-2 rounded-full">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="white"/>
-                        <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0V20Z" fill="#F7CCAF"/>
-                    </svg>
-                </div>
                 <span className="font-bold font-headline text-lg tracking-wide">{title}</span>
               </Link>
               <nav className="grid gap-6 text-lg font-medium">
