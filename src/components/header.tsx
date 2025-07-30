@@ -1,16 +1,12 @@
+
 import Link from "next/link";
 import { Github, Instagram, Linkedin, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { socialLinks } from "@/lib/data";
+import { siteData } from "@/lib/data";
 
 export default function Header() {
-  const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#experience", label: "Experience" },
-    { href: "#contact", label: "Contact" },
-  ];
+  const { navLinks, title, socialLinks } = siteData.header;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
@@ -22,7 +18,7 @@ export default function Header() {
                 <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0V20Z" fill="#F7CCAF"/>
             </svg>
           </div>
-          <span className="font-bold font-headline text-lg tracking-wide hidden sm:inline-block">My Digital Stage</span>
+          <span className="font-bold font-headline text-lg tracking-wide hidden sm:inline-block">{title}</span>
         </Link>
         
         <div className="hidden items-center space-x-2 md:flex">
@@ -41,13 +37,13 @@ export default function Header() {
 
         <div className="hidden items-center space-x-2 md:flex">
           <Button variant="ghost" size="icon" asChild>
-            <Link href={socialLinks.github} target="_blank" aria-label="GitHub"><Github /></Link>
+            <Link href={siteData.socialLinks.github} target="_blank" aria-label="GitHub"><Github /></Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href={socialLinks.linkedin} target="_blank" aria-label="LinkedIn"><Linkedin /></Link>
+            <Link href={siteData.socialLinks.linkedin} target="_blank" aria-label="LinkedIn"><Linkedin /></Link>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <Link href={socialLinks.instagram} target="_blank" aria-label="Instagram"><Instagram /></Link>
+            <Link href={siteData.socialLinks.instagram} target="_blank" aria-label="Instagram"><Instagram /></Link>
           </Button>
         </div>
 
@@ -67,7 +63,7 @@ export default function Header() {
                         <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0V20Z" fill="#F7CCAF"/>
                     </svg>
                 </div>
-                <span className="font-bold font-headline text-lg tracking-wide">My Digital Stage</span>
+                <span className="font-bold font-headline text-lg tracking-wide">{title}</span>
               </Link>
               <nav className="grid gap-6 text-lg font-medium">
                 {navLinks.map((link) => (
