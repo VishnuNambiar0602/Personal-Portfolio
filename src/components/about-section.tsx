@@ -51,7 +51,7 @@ export default function AboutSection() {
         </div>
         <div className="relative aspect-square">
           <Image
-            src="/Vishnu.jpeg"
+            src={siteData.about.image}
             alt="About Me"
             fill
             className="rounded-lg object-cover shadow-lg"
