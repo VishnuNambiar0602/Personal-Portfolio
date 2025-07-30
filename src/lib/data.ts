@@ -1,3 +1,4 @@
+// src/lib/data.ts
 
 export type Content = {
   title: string;
@@ -8,47 +9,57 @@ export type Content = {
   imageHint: string;
 };
 
+/**
+ * The main configuration object for the entire website.
+ * This object is used to populate all the content on the site.
+ * Changing the values here will update the corresponding sections on the website.
+ */
 export const siteData = {
-  // Hero Section Content
+  // Hero Section Content: Used for the main landing page hero section.
   hero: {
     title: 'AI & ML Engineering Student',
     subtitle: 'Pursuing a B.Tech in Artificial Intelligence and Machine Learning at CHRIST University, Bangalore, with a strong passion for emerging technologies and real-world problem-solving.',
   },
-  // About Section Content
+  // About Section Content: Used for the "About Me" section.
   about: {
     title: 'About Me',
     description: "Driven by curiosity and a commitment to continuous learning, I actively seek opportunities to expand my expertise. With a solid foundation in AI and ML, I am eager to apply my skills in innovation and data-driven solutions to make a meaningful impact in the evolving tech landscape.",
     skillsTitle: 'My Skills',
-    skills: [
-      'C++', 'C', 'SQL', 'Python', 'VScode', 'Microsoft Excel', 
-      'Oracle VM machines', 'Flutter', 'Figma', 'Google Applications', 
-      'Data Science', 'Data Analytics', 'PyTorch', 'Tensorflow', 'OpenCV',
-      'Communication', 'Project Management', 'Team Management', 'Time management',
-      'Strategic Thinking', 'Public Relations', 'Leadership', 'Creative thinking',
-      'Adaptability', 'Problem Solving'
-    ],
+    // Skills are now categorized. The about-section component will render them with a toggle.
+    skills: {
+      technical: [
+        'C++', 'C', 'SQL', 'Python', 'VScode', 'Microsoft Excel', 
+        'Oracle VM machines', 'Flutter', 'Figma', 'Google Applications', 
+        'Data Science', 'Data Analytics', 'PyTorch', 'Tensorflow', 'OpenCV'
+      ],
+      soft: [
+        'Communication', 'Project Management', 'Team Management', 'Time management',
+        'Strategic Thinking', 'Public Relations', 'Leadership', 'Creative thinking',
+        'Adaptability', 'Problem Solving'
+      ]
+    }
   },
-  // Projects Section Content
+  // Projects Section Content: Used for the "Featured Projects" section.
   projects: {
     title: 'Featured Projects',
     description: "Here are some of the projects I'm proud to have worked on.",
   },
-  // Experience Section Content
+  // Experience Section Content: Used for the "My Experience" section.
   experience: {
     title: 'My Experience',
     description: 'A timeline of my professional journey and key roles.',
   },
-  // Education Section Content
+  // Education Section Content: Used for the "Education" section.
   education: {
     title: 'Education',
     description: 'My academic background and qualifications.',
   },
-  // Contact Section Content
+  // Contact Section Content: Used for the "Get in Touch" section.
   contact: {
     title: 'Get in Touch',
     description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out.",
   },
-  // Header Navigation Links
+  // Header Navigation Links: Used for the main navigation bar.
   header: {
     navLinks: [
       { href: "#about", label: "About" },
@@ -59,13 +70,13 @@ export const siteData = {
     ],
     title: "Vishnu Nambiar",
   },
-  // Social Media Links
+  // Social Media Links: Used in the header and contact sections.
   socialLinks: {
     github: "https://github.com/VishnuNambiar0602",
     linkedin: "https://www.linkedin.com/in/vishnu-nambiar-27b120288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/vishnu_0602?igsh=dDk4cWJzaWZvdWo2",
   },
-  // Content for the Projects section
+  // Content for the Projects section: An array of project objects.
   projectsContent: [
     {
       title: "Piezo-Electric Power Generator",
@@ -92,7 +103,7 @@ export const siteData = {
       imageHint: "AI agent",
     },
   ] as Content[],
-  // Content for the Experience section
+  // Content for the Experience section: An array of experience objects.
   experiencesContent: [
     {
       title: "Student Head, CHRIST Incubation and Consulting Foundation (June 2024 - Dec 2024)",
@@ -119,7 +130,7 @@ export const siteData = {
       imageHint: "mobile app",
     },
   ] as Content[],
-    // Content for the Education section
+    // Content for the Education section: An array of education objects.
   educationsContent: [
     {
       title: "CHRIST University, Bangalore (June 2023 - May 2027)",
