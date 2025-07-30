@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { siteData } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Bot, PenTool, Database } from "lucide-react";
+import ContactForm from "./contact-form";
 
 const iconMap = {
   "Website Development": <Code className="w-8 h-8 text-primary" />,
@@ -32,17 +33,19 @@ export default function HireMeSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {siteData.hireMe.services.map((service) => (
-            <Card key={service.title} className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <div className="flex justify-center mb-4">
-                  {iconMap[service.title as keyof typeof iconMap]}
-                </div>
-                <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{service.description}</p>
-              </CardContent>
-            </Card>
+            <ContactForm key={service.title} service={service.title}>
+              <Card className="text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer h-full">
+                <CardHeader>
+                  <div className="flex justify-center mb-4">
+                    {iconMap[service.title as keyof typeof iconMap]}
+                  </div>
+                  <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{service.description}</p>
+                </CardContent>
+              </Card>
+            </ContactForm>
           ))}
         </div>
       </div>
