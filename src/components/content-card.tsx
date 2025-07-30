@@ -17,23 +17,21 @@ export default function ContentCard({ title, description, image, link, tags, ima
   return (
     <Link href={link} target="_blank" rel="noopener noreferrer" className="block group" aria-label={`View ${title}`}>
       <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-[1.02] bg-card text-card-foreground">
-        <CardHeader className="p-0">
-          <div className="relative w-full aspect-video overflow-hidden">
-            <Image 
-              src={image} 
-              alt={title} 
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              data-ai-hint={imageHint}
-            />
-          </div>
-          <div className="p-6">
-            <CardTitle className="font-headline text-xl lg:text-2xl mb-2 flex items-center justify-between">
-              {title}
-              <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </CardTitle>
-            <CardDescription>{description}</CardDescription>
-          </div>
+        <div className="relative w-full aspect-video overflow-hidden">
+          <Image 
+            src={image} 
+            alt={title} 
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            data-ai-hint={imageHint}
+          />
+        </div>
+        <CardHeader>
+          <CardTitle className="font-headline text-xl lg:text-2xl mb-2 flex items-center justify-between">
+            {title}
+            <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+          </CardTitle>
+          <CardDescription>{description}</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-2">
