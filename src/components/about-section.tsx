@@ -2,7 +2,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { siteData } from "@/lib/data";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -50,11 +49,11 @@ export default function AboutSection() {
           </div>
         </div>
         <div className="relative aspect-square">
-          <Image
+          {/* Using a standard img tag to avoid Next.js image optimization issues */}
+          <img
             src={siteData.about.image}
             alt="About Me"
-            fill
-            className="rounded-lg object-cover shadow-lg"
+            className="rounded-lg object-cover shadow-lg w-full h-full"
             data-ai-hint="portrait photo"
           />
         </div>
