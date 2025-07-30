@@ -9,28 +9,34 @@ export type Content = {
 };
 
 export const siteData = {
+  // Hero Section Content
   hero: {
     title: '"With great codes comes great bugs"',
     subtitle: '...and I am here for neither.',
   },
+  // About Section Content
   about: {
     title: 'About Me',
     description: "I'm a passionate and creative developer with a knack for building beautiful, functional, and user-friendly web applications. With a strong foundation in modern web technologies, I love turning complex problems into simple, elegant solutions. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.",
     skillsTitle: 'My Skills',
     skills: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS'],
   },
+  // Projects Section Content
   projects: {
     title: 'Featured Projects',
     description: "Here are some of the projects I'm proud to have worked on.",
   },
+  // Experience Section Content
   experience: {
     title: 'My Experience',
     description: 'A timeline of my professional journey and key roles.',
   },
+  // Contact Section Content
   contact: {
     title: 'Get in Touch',
     description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out.",
   },
+  // Header Navigation Links
   header: {
     navLinks: [
       { href: "#about", label: "About" },
@@ -40,11 +46,13 @@ export const siteData = {
     ],
     title: "My Digital Stage",
   },
+  // Social Media Links
   socialLinks: {
     github: "https://github.com/VishnuNambiar0602",
     linkedin: "https://www.linkedin.com/in/vishnu-nambiar-27b120288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/vishnu_0602?igsh=dDk4cWJzaWZvdWo2",
   },
+  // Content for the Projects section
   projectsContent: [
     {
       title: "AI-Powered E-commerce Platform",
@@ -71,6 +79,7 @@ export const siteData = {
       imageHint: "social media",
     },
   ] as Content[],
+  // Content for the Experience section
   experiencesContent: [
     {
       title: "Senior Software Engineer, TechCorp",
