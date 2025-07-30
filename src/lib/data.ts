@@ -25,7 +25,7 @@ export const siteData = {
     title: 'About Me',
     description: "Driven by curiosity and a commitment to continuous learning, I actively seek opportunities to expand my expertise. With a solid foundation in AI and ML, I am eager to apply my skills in innovation and data-driven solutions to make a meaningful impact in the evolving tech landscape.",
     // This now points to an image in the `public` folder.
-    image: "/vishnu.jpg",
+    image: "https://placehold.co/600x600.png",
     skillsTitle: 'My Skills',
     
     // Skills are now categorized. The about-section component will render them with a toggle.
