@@ -12,6 +12,8 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+// STEP 4 (from src/lib/email.ts): Import your email sending function.
+// import { sendEmail } from '@/lib/email';
 
 const SendContactEmailInputSchema = z.object({
   name: z.string().describe('The name of the person sending the email.'),
@@ -46,8 +48,17 @@ const sendContactEmailFlow = ai.defineFlow(
   },
   async input => {
     console.log('Received contact form submission:', input);
+    
     // In a real application, you would add your email sending logic here.
     // For example, using a service like SendGrid, Nodemailer, or Resend.
+    // See the instructions in `src/lib/email.ts`.
+    
+    // STEP 4 (continued): Call your email sending function here.
+    // const emailResult = await sendEmail(input);
+    // if (!emailResult.success) {
+    //   return { success: false, message: emailResult.message };
+    // }
+
     return {
       success: true,
       message: 'Your message has been sent successfully!',
