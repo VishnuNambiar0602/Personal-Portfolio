@@ -18,7 +18,7 @@ export const siteData = {
   // Hero Section Content: Used for the main landing page hero section.
   hero: {
     title: 'With great code comes great bugs',
-    subtitle: '...i am here for neither',
+    subtitle: '...I am here for neither',
   },
   // About Section Content: Used for the "About Me" section.
   about: {
@@ -123,7 +123,7 @@ export const siteData = {
     },
     {
       title: "Industry Learning Intern, Tata Consultancy Services (TCS) (April 2025 - May 2025)",
-      description: "Focused on inclusive mobile app development using Flutter. Contributed to UI/UX design, feature testing, and conducted market research on accessibility solutions.",
+      description: "Gained hands-on experience in inclusive mobile app development using Flutter. Contributed to UI/UX design, conducted feature testing, and researched accessibility solutions to enhance user experience.",
       image: "https://placehold.co/600x400.png",
       link: "https://linkedin.com",
       tags: ["Flutter", "Mobile Development", "UI/UX", "Accessibility"],
@@ -134,7 +134,7 @@ export const siteData = {
   educationsContent: [
     {
       title: "CHRIST University, Bangalore (June 2023 - May 2027)",
-      description: "B.Tech in Artificial Intelligence and Machine Learning. Gaining expertise in AI/ML through hands-on projects and industry-relevant research. Proficient in Python, TensorFlow, PyTorch, and data analytics.",
+      description: "Pursuing a B.Tech in Artificial Intelligence and Machine Learning. Gaining expertise in AI/ML through hands-on projects and industry-relevant research. Proficient in Python, TensorFlow, and PyTorch.",
       image: "https://placehold.co/600x400.png",
       link: "#",
       tags: ["B.Tech", "AI", "Machine Learning", "Python"],
@@ -142,7 +142,7 @@ export const siteData = {
     },
     {
       title: "Army Public School, Kannur (May 2021 - May 2023)",
-      description: "High School, Computer Science. Gained a solid foundation in programming and problem-solving, developing strong analytical and computational skills.",
+      description: "Completed High School with a focus on Computer Science. Built a solid foundation in programming and problem-solving, developing strong analytical and computational skills.",
       image: "https://placehold.co/600x400.png",
       link: "#",
       tags: ["High School", "Computer Science", "Programming"],
