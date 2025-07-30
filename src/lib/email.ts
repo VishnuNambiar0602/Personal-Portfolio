@@ -27,7 +27,7 @@ export async function sendEmail({ name, email, message }: EmailPayload) {
       // It's recommended to eventually verify your own domain with Resend.
       from: 'Portfolio Contact Form <onboarding@resend.dev>',
       // This should be YOUR personal email address where you want to receive messages.
-      to: ['your-personal-email@example.com'], // <<<<<<< IMPORTANT: REPLACE THIS with your actual email address.
+      to: ['vishnunambiar2006@gmail.com'], // <<<<<<< IMPORTANT: REPLACE THIS with your actual email address.
       subject: `New message from ${name} on your portfolio`,
       // The email content.
       html: `
