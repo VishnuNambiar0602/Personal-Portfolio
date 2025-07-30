@@ -51,11 +51,11 @@ export default function AboutSection() {
         </div>
         <div className="relative aspect-square">
           <Image
-            src="https://placehold.co/600x600.png"
+            src="/Vishnu.jpeg"
             alt="About Me"
             fill
             className="rounded-lg object-cover shadow-lg"
-            data-ai-hint="futuristic anime"
+            data-ai-hint="portrait photo"
           />
         </div>
       </div>
