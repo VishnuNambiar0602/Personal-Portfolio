@@ -24,8 +24,8 @@ export const siteData = {
   about: {
     title: 'About Me',
     description: "Driven by curiosity and a commitment to continuous learning, I actively seek opportunities to expand my expertise. With a solid foundation in AI and ML, I am eager to apply my skills in innovation and data-driven solutions to make a meaningful impact in the evolving tech landscape.",
-    // Replace this with a direct link to your photo from a service like Imgur. See the README for more info.
-    image: "https://i.postimg.cc/tJvM2p1q/Vishnu.jpg",
+    // This now points to an image in the `public` folder.
+    image: "/vishnu.jpg",
     skillsTitle: 'My Skills',
     
     // Skills are now categorized. The about-section component will render them with a toggle.
@@ -118,7 +118,7 @@ export const siteData = {
       title: "Restaurant Management using Machine Learning",
       description: "Implemented ML models to improve sales forecasting, optimize resource allocation, and enhance customer experience. Utilized ARIMA, Random Forest, and Gradient Boosting models for data analysis.",
       image: "https://placehold.co/600x400.png",
-      link: "https://github.com",
+      link: "https.github.com",
       tags: ["Python", "Machine Learning", "Pandas", "NumPy", "Matplotlib"],
       imageHint: "data analysis",
     },
