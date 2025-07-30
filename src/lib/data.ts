@@ -11,15 +11,22 @@ export type Content = {
 export const siteData = {
   // Hero Section Content
   hero: {
-    title: '"With great codes comes great bugs"',
-    subtitle: '...and I am here for neither.',
+    title: 'AI & ML Engineering Student',
+    subtitle: 'Pursuing a B.Tech in Artificial Intelligence and Machine Learning at CHRIST University, Bangalore, with a strong passion for emerging technologies and real-world problem-solving.',
   },
   // About Section Content
   about: {
     title: 'About Me',
-    description: "I'm a passionate and creative developer with a knack for building beautiful, functional, and user-friendly web applications. With a strong foundation in modern web technologies, I love turning complex problems into simple, elegant solutions. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.",
+    description: "Driven by curiosity and a commitment to continuous learning, I actively seek opportunities to expand my expertise. With a solid foundation in AI and ML, I am eager to apply my skills in innovation and data-driven solutions to make a meaningful impact in the evolving tech landscape.",
     skillsTitle: 'My Skills',
-    skills: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS'],
+    skills: [
+      'C++', 'C', 'SQL', 'Python', 'VScode', 'Microsoft Excel', 
+      'Oracle VM machines', 'Flutter', 'Figma', 'Google Applications', 
+      'Data Science', 'Data Analytics', 'PyTorch', 'Tensorflow', 'OpenCV',
+      'Communication', 'Project Management', 'Team Management', 'Time management',
+      'Strategic Thinking', 'Public Relations', 'Leadership', 'Creative thinking',
+      'Adaptability', 'Problem Solving'
+    ],
   },
   // Projects Section Content
   projects: {
@@ -30,6 +37,11 @@ export const siteData = {
   experience: {
     title: 'My Experience',
     description: 'A timeline of my professional journey and key roles.',
+  },
+  // Education Section Content
+  education: {
+    title: 'Education',
+    description: 'My academic background and qualifications.',
   },
   // Contact Section Content
   contact: {
@@ -42,68 +54,80 @@ export const siteData = {
       { href: "#about", label: "About" },
       { href: "#projects", label: "Projects" },
       { href: "#experience", label: "Experience" },
+      { href: "#education", label: "Education" },
       { href: "#contact", label: "Contact" },
     ],
-    title: "My Digital Stage",
+    title: "Vishnu Nambiar",
   },
   // Social Media Links
   socialLinks: {
-    github: "https://github.com/VishnuNambiar0602",
-    linkedin: "https://www.linkedin.com/in/vishnu-nambiar-27b120288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    github: "https://github.com/vishnunambiar06",
+    linkedin: "https://linkedin.com/in/vishnunambiar",
     instagram: "https://www.instagram.com/vishnu_0602?igsh=dDk4cWJzaWZvdWo2",
   },
   // Content for the Projects section
   projectsContent: [
     {
-      title: "AI-Powered E-commerce Platform",
-      description: "A full-stack e-commerce site with personalized recommendations using machine learning.",
+      title: "Piezo-Electric Power Generator",
+      description: "Developed a piezoelectric material-based power generator to convert mechanical stress into electrical energy. Optimized material deposition techniques, increasing generated current by 20% and improving energy conversion efficiency.",
       image: "https://placehold.co/600x400.png",
       link: "https://github.com",
-      tags: ["Next.js", "TypeScript", "Python", "GenAI"],
-      imageHint: "technology abstract",
+      tags: ["Piezoelectricity", "Energy Conversion", "Material Science"],
+      imageHint: "electric circuit",
     },
     {
-      title: "Interactive Data Visualization Dashboard",
-      description: "A real-time analytics dashboard for visualizing complex datasets with dynamic charts and graphs.",
+      title: "Restaurant Management using Machine Learning",
+      description: "Implemented ML models to improve sales forecasting, optimize resource allocation, and enhance customer experience. Utilized ARIMA, Random Forest, and Gradient Boosting models for data analysis.",
       image: "https://placehold.co/600x400.png",
       link: "https://github.com",
-      tags: ["React", "D3.js", "Node.js", "WebSocket"],
-      imageHint: "data dashboard",
-    },
-    {
-      title: "Mobile-First Social Networking App",
-      description: "A cross-platform mobile app designed to connect like-minded individuals through shared interests.",
-      image: "https://placehold.co/600x400.png",
-      link: "https://github.com",
-      tags: ["React Native", "Firebase", "GraphQL"],
-      imageHint: "social media",
+      tags: ["Python", "Machine Learning", "Pandas", "NumPy", "Matplotlib"],
+      imageHint: "data analysis",
     },
   ] as Content[],
   // Content for the Experience section
   experiencesContent: [
     {
-      title: "Senior Software Engineer, TechCorp",
-      description: "Led the development of core features for a flagship product, mentored junior developers, and improved system architecture.",
+      title: "Student Head, CHRIST Incubation and Consulting Foundation (June 2024 - Dec 2024)",
+      description: "Led 14+ projects, including 3+ international initiatives across AI and web development. Improved efficiency by 30% and enhanced intern recruitment by 40% for 150+ interns.",
       image: "https://placehold.co/600x400.png",
       link: "https://linkedin.com",
-      tags: ["Leadership", "System Design", "Agile"],
-      imageHint: "corporate office",
+      tags: ["Leadership", "Project Management", "AI", "Web Development"],
+      imageHint: "leadership team",
     },
     {
-      title: "Full-Stack Developer, Innovate Inc.",
-      description: "Developed and maintained web applications across the full stack, from UI/UX implementation to database management.",
+      title: "Chief Editor, INICIA (June 2024 - March 2025)",
+      description: "Enhanced club visibility by 50% through strategic branding and creative oversight of 10+ projects. Boosted social media engagement by 40% with targeted content.",
       image: "https://placehold.co/600x400.png",
       link: "https://linkedin.com",
-      tags: ["JavaScript", "SQL", "CI/CD", "DevOps"],
-      imageHint: "startup workspace",
+      tags: ["Branding", "Content Strategy", "Social Media"],
+      imageHint: "creative content",
     },
     {
-      title: "Software Development Intern, Solutions LLC",
-      description: "Gained hands-on experience in a professional software development environment, contributing to bug fixes and feature enhancements.",
+      title: "Industry Learning Intern, Tata Consultancy Services (TCS) (April 2025 - May 2025)",
+      description: "Focused on inclusive mobile app development using Flutter. Contributed to UI/UX design, feature testing, and conducted market research on accessibility solutions.",
       image: "https://placehold.co/600x400.png",
       link: "https://linkedin.com",
-      tags: ["Internship", "Teamwork", "Problem Solving"],
-      imageHint: "team meeting",
+      tags: ["Flutter", "Mobile Development", "UI/UX", "Accessibility"],
+      imageHint: "mobile app",
+    },
+  ] as Content[],
+    // Content for the Education section
+  educationsContent: [
+    {
+      title: "CHRIST University, Bangalore (June 2023 - May 2027)",
+      description: "B.Tech in Artificial Intelligence and Machine Learning. Gaining expertise in AI/ML through hands-on projects and industry-relevant research. Proficient in Python, TensorFlow, PyTorch, and data analytics.",
+      image: "https://placehold.co/600x400.png",
+      link: "#",
+      tags: ["B.Tech", "AI", "Machine Learning", "Python"],
+      imageHint: "university campus",
+    },
+    {
+      title: "Army Public School, Kannur (May 2021 - May 2023)",
+      description: "High School, Computer Science. Gained a solid foundation in programming and problem-solving, developing strong analytical and computational skills.",
+      image: "https://placehold.co/600x400.png",
+      link: "#",
+      tags: ["High School", "Computer Science", "Programming"],
+      imageHint: "school building",
     },
   ] as Content[],
 };

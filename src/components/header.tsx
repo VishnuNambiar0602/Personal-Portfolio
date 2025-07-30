@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { siteData } from "@/lib/data";
 
 export default function Header() {
-  const { navLinks, title, socialLinks } = siteData.header;
+  const { navLinks, title } = siteData.header;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
