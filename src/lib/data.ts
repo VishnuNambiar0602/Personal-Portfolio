@@ -1,4 +1,5 @@
 
+
 // src/lib/data.ts
 
 export type Content = {
@@ -138,7 +139,7 @@ export const siteData = {
       title: "Student Head, CHRIST Incubation and Consulting Foundation (June 2024 - Dec 2024)",
       description: "Led 14+ projects, including 3+ international initiatives across AI and web development. Improved efficiency by 30% and enhanced intern recruitment by 40% for 150+ interns.",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxDb25zdWx0aW5nfGVufDB8fHx8MTc1MzkwMTgyOHww&ixlib=rb-4.1.0&q=80&w=1080",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/vishnu-nambiar-27b120288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       tags: ["Leadership", "Project Management", "AI", "Web Development"],
       imageHint: "leadership team",
     },
@@ -146,7 +147,7 @@ export const siteData = {
       title: "Chief Editor, INICIA (June 2024 - March 2025)",
       description: "Enhanced club visibility by 50% through strategic branding and creative oversight of 10+ projects. Boosted social media engagement by 40% with targeted content.",
       image: "https://images.unsplash.com/photo-1642543492563-173752101d4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxFZGl0b3J8ZW58MHx8fHwxNzUzOTAxODQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/vishnu-nambiar-27b120288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       tags: ["Branding", "Content Strategy", "Social Media"],
       imageHint: "creative content",
     },
@@ -154,7 +155,7 @@ export const siteData = {
       title: "Industry Learning Intern, Tata Consultancy Services (TCS) (April 2025 - May 2025)",
       description: "Gained hands-on experience in inclusive mobile app development using Flutter. Contributed to UI/UX design, conducted feature testing, and researched accessibility solutions to enhance user experience.",
       image: "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MXwxfHNlYXJjaHwxfHxUZWNofGVufDB8fHx8MTc1MzkwMTg1NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/vishnu-nambiar-27b120288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       tags: ["Flutter", "Mobile Development", "UI/UX", "Accessibility"],
       imageHint: "mobile app",
     },
@@ -179,3 +180,5 @@ export const siteData = {
     },
   ] as Content[],
 };
+
+    
