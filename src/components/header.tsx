@@ -1,12 +1,100 @@
+"use client"; // 1. Add "use client" to use hooks and browser functions
 
 import Link from "next/link";
-import { Github, Instagram, Linkedin, Menu } from "lucide-react";
+import { Github, Instagram, Linkedin, Menu, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { siteData } from "@/lib/data";
+import { useCallback } from "react"; // 2. Import useCallback
+
+// 3. Function to generate the ATS-friendly text content
+const generateResumeText = () => {
+  const { header, socialLinks, about, experiencesContent, projectsContent, educationsContent } = siteData;
+
+  // Helper for formatting arrays
+  const formatList = (items: string[]) => items.join(', ');
+  const sectionBreak = '\n============================================================\n';
+
+  let content = `
+${header.title}
+============================================================
+Email: vishnunambiar2006@gmail.com
+LinkedIn: ${socialLinks.linkedin}
+GitHub: ${socialLinks.github}
+
+${sectionBreak}
+SUMMARY
+============================================================
+${about.description}
+
+${sectionBreak}
+TECHNICAL SKILLS
+============================================================
+${formatList(about.skills.technical)}
+
+${sectionBreak}
+SOFT SKILLS
+============================================================
+${formatList(about.skills.soft)}
+
+${sectionBreak}
+EXPERIENCE
+============================================================
+
+${experiencesContent.map(exp => `
+------------------------------------------------------------
+${exp.title}
+${exp.description}
+Tags: ${formatList(exp.tags)}
+`).join('')}
+
+${sectionBreak}
+PROJECTS
+============================================================
+
+${projectsContent.map(proj => `
+------------------------------------------------------------
+${proj.title}
+${proj.description}
+Tags: ${formatList(proj.tags)}
+`).join('')}
+
+${sectionBreak}
+EDUCATION
+============================================================
+
+${educationsContent.map(edu => `
+------------------------------------------------------------
+${edu.title}
+${edu.description}
+Tags: ${formatList(edu.tags)}
+`).join('')}
+  `;
+
+  // Clean up extra indentation for the .txt file
+  return content.split('\n').map(line => line.trim()).join('\n');
+};
 
 export default function Header() {
   const { navLinks, title } = siteData.header;
+
+  // 4. Create the download handler
+  const handleDownloadResume = useCallback(() => {
+    const textContent = generateResumeText();
+    const blob = new Blob([textContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    
+    // Create a temporary link to trigger the download
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Vishnu_Nambiar_Resume.txt'; // Set the file name
+    document.body.appendChild(a);
+    a.click();
+    
+    // Clean up
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
@@ -31,6 +119,11 @@ export default function Header() {
         </div>
 
         <div className="hidden items-center space-x-2 md:flex">
+          {/* 5. Update the Download Button to use the onClick handler */}
+          <Button variant="ghost" size="icon" onClick={handleDownloadResume} aria-label="Download Resume">
+            <Download />
+          </Button>
+
           <Button variant="ghost" size="icon" asChild>
             <Link href={siteData.socialLinks.github} target="_blank" aria-label="GitHub"><Github /></Link>
           </Button>
@@ -64,6 +157,14 @@ export default function Header() {
                     {link.label}
                   </Link>
                 ))}
+                {/* 6. Update the mobile link to use the onClick handler */}
+                <button
+                  onClick={handleDownloadResume}
+                  className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground text-left"
+                  aria-label="Download Resume"
+                >
+                  Download Resume
+                </button>
               </nav>
             </SheetContent>
           </Sheet>
